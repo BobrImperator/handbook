@@ -1,0 +1,16 @@
+<div
+  class="users"
+  {{did-insert this.loadUsers}}
+>
+  <Users::Form
+    @user={{this.formUser}}
+    @changeField={{fn this.changeUserField this.formUser}}
+    @onSubmit={{fn this.saveUser this.formUser}}
+    @newUser={{this.createUser}}
+  />
+
+  <Users::List
+    @users={{this.users}}
+    @editUser={{this.editUser}}
+  />
+</div>

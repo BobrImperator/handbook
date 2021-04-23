@@ -1,0 +1,8 @@
+<div class="users__list">
+  {{#each @users as |user|}}
+    <Users::Item
+      @user={{user}}
+      @editUser={{fn @editUser user}}
+    />
+  {{/each}}
+</div>

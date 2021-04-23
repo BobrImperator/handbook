@@ -1,0 +1,13 @@
+<div class="users__item">
+  <span>
+    {{@user.name}}
+    {{@user.email}}
+  </span>
+
+  <button
+    type="button"
+    {{on "click" @editUser}}
+  >
+    Edit
+  </button>
+</div>

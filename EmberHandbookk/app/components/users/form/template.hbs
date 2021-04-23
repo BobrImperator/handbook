@@ -1,0 +1,33 @@
+<form
+  class="users__form"
+  {{on "submit" this.submit}}
+>
+  <label>
+    Name
+    <input
+      type="text"
+      value={{@user.name}}
+      {{on "change" (fn this.setField "name")}}
+    >
+  </label>
+
+  <label>
+    Email
+    <input
+      type="email"
+      value={{@user.email}}
+      {{on "change" (fn this.setField "email")}}
+    >
+  </label>
+
+  <button type="submit">
+    Submit
+  </button>
+
+  <button
+    type="button"
+    {{on "click" @newUser}}
+  >
+    New
+  </button>
+</form>
